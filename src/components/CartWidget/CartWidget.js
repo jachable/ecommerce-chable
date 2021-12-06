@@ -2,9 +2,7 @@ import logo from './../../assets/bookstore.png';
 
 const CartWidget = () => {
     return (
-    <header>
-        <img src={logo} className="App-logo" style={{height:'20vmin'}} alt="logo marca" />
-    </header>
+        <img src={logo} className="App-logo" style={{height:'10vmin'}} alt="logo marca" />
     )
 }
 export default CartWidget;
