@@ -4,7 +4,7 @@ body {
   background: #ece5da;
   font-family: helvetica, arial, serif;
   font-size: 13px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   text-align: center;
 }
  
@@ -114,7 +114,7 @@ ul.primary li:hover ul {
 
 /* keeps the tab background white */
 ul.primary li:hover a {
-  background: #fff;
+  background: lightseagreen;
   color: #666;
   text-shadow: none;
 }
