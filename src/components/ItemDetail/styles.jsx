@@ -11,7 +11,8 @@ export const styles = {
         flex: '0 1 24%'
     },
     card_a: {
-        color: 'blue'
+        color: 'black',
+        textDecoration: 'none'
     },
     card_a_hover: {
         boxShadow: '3px 3px 8px hsl(0, 0%, 80%)'
