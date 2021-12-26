@@ -1,9 +1,9 @@
 import './../../assets/css/NavBar.css';
-import Link from '../Link'
-const SubmenuLink = () => {
+import Enlace from '../Enlace'
+const SubmenuEnlace = () => {
     <ul className="sub">
-        <Link ruta={''} nombre={''} />
+        <Enlace ruta={''} nombre={''} />
     </ul>
 };
 
-export default SubmenuLink;
+export default SubmenuEnlace;

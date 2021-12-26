@@ -1,7 +1,7 @@
 import './../../assets/css/NavBar.css';
 import CartWidget from '../CartWidget/CartWidget';
 import TitleWidget from '../TitleWidget/index';
-import Link from '../Link/index';
+import Enlace from '../Enlace/index';
 
 const NavBar = () => {
     return (
@@ -10,10 +10,7 @@ const NavBar = () => {
             <TitleWidget />
             <nav>
                 <ul className="primary">
-                    <Link ruta='/' nombre='Home' />
-                    <Link ruta='/' nombre='Colecciones' />
-                    <Link ruta='/' nombre='Clásicos' />
-                    <Link ruta='/' nombre='Contacto' />
+                    <Enlace />
                 </ul>
             </nav>
         </div>
