@@ -1,21 +1,31 @@
 import { useState, useEffect } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail.jsx";
-import ItemDetailUnique from "../Mocks/ItemDetailUnique.jsx";
+import CatalogMock from "../Mocks/CatalogItem.jsx";
+import { useParams } from "react-router-dom";
 
-const ItemDetailContainer = (props) => {
-    const [detail, setDetail] = useState([]);
+const ItemDetailContainer = () => {
+    const [detail, setDetail] = useState({});
+    const { id } = useParams();
+
     useEffect(() => {
-        const getItems = new Promise((resolve, rejected) => {
-            resolve(ItemDetailUnique)
+        const getItems = new Promise((resolve) => {
+            resolve(CatalogMock)
         });
         getItems.then((resolve) => {
-            setTimeout(() => setDetail(resolve), 2000);
+            setTimeout(() => {
+                const itemFilter = id 
+                ? CatalogMock.filter( item =>
+                    item.id === id
+                )
+                : resolve;
+                setDetail(itemFilter.shift());
+            }, 2000);
         });
 
-    }, [detail]); //Porqué agregar detail (?)
+    }, [id]); //Porqué agregar detail (?)
 
     return (
-        <ItemDetail ItemDataDetail={detail}/>
+        <ItemDetail detail={detail}/> //Destructuración, nos ahorramos una variable XD
     )
 }
 export default ItemDetailContainer;

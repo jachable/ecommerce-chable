@@ -1,6 +1,6 @@
 import { styles } from "./styles";
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 const Item = ({item}) => {
    const [hover, setHover] = useState(false);
     return (
@@ -15,7 +15,7 @@ const Item = ({item}) => {
                onMouseLeave={() => setHover(false)}>
                
                <p style={styles.card_content_h2}>
-                  <a style={styles.card_a} href={`item/${item.id}`}> {item.title}</a>
+                  <Link style={styles.card_a} to={`/item/${item.id}`}> {item.title}</Link>
                </p>
 
                <p style={styles.card_content_h2}>SKU: {item.id}</p>
