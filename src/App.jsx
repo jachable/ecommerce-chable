@@ -1,6 +1,7 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/Container/ItemListContainer';
+import Cart from './components/Cart';
 import {
   BrowserRouter,
   Switch,
@@ -21,9 +22,9 @@ const App = () => (
         <Route exact path="/item/:id">
           <ItemDetailContainer />
         </Route>
-        {/* <Route exact path="*">
-          <Redirect to="/" />
-        </Route> */}
+        <Route exact path="/cart">
+          <Cart />
+        </Route>
       </Switch>
     </BrowserRouter>
 )
